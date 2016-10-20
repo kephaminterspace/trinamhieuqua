@@ -63,7 +63,6 @@ def index():
 
         else:
             return render_template('index.html', form=form)
-
     return render_template('index.html', form=form)
 
 
