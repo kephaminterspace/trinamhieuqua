@@ -23,7 +23,7 @@ class BankForm(Form):
     # cardtype = SelectField('Cardtype', choices=CARDTYPE, validators=[DataRequired(message=u'Xin vui lòng chọn Loại thẻ đăng ký')], coerce=int)
     # caoch = SelectField('Salary', choices=CAOCH, validators=[DataRequired(message=u'Xin vui lòng chọn Mức thu nhập của bạn')], coerce=int)
 
-    toidongy = BooleanField("Agree", validators = [DataRequired(message=u'Bạn phải đồng ý với điều khoản của chúng tôi')])
+    # toidongy = BooleanField("Agree", validators = [DataRequired(message=u'Bạn phải đồng ý với điều khoản của chúng tôi')])
     aff_source = HiddenField("aff_source")
     aff_sid = HiddenField("aff_sid")
     submit = SubmitField('Submit')
