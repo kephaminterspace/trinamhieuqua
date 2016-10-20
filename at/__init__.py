@@ -16,7 +16,7 @@ from .utils import *
 logger = logging.getLogger(__name__)
 app = Flask(__name__, template_folder="templates", static_folder="statics")
 #app.config.from_object("at.config")
-app.secret_key = 'trinamhieuquafajdslkf'
+app.secret_key = 'tnhqfajdslkf'
 
 @app.route('/robots.txt')
 def static_from_root():
@@ -36,12 +36,15 @@ def index():
                     {"property":"email", "value":form.email.data},
                     {"property":"phone", "value":form.phone.data},
                     {"property":"hs_lead_status", "value":"NEW"},
+                    {"property": "at_check", "value": "NEW_STATUS"},
+                    {"property": "bn_check", "value": "NEW_STATUS"},
                     {"property":"aff_source", "value":form.aff_source.data},
                     {"property":"aff_sid", "value":form.aff_sid.data},
                 ]
             }
 
-            url = "https://api.hubapi.com/contacts/v1/contact/?hapikey=XXXX"
+            url = "https://api.hubapi.com/contacts/v1/contact/?hapikey=882940b4-885e-40c2-9bd4-5adfccfe18a7"
+
             header = {'Content-Type': 'application/json'}
             print json.dumps(data)
             res = requests.post(url=url, data=json.dumps(data), headers=header)
