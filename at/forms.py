@@ -18,6 +18,7 @@ class BankForm(Form):
     name = TextField('Name', validators = [DataRequired(message=u'Tên không chính xác')])
     phone = TextField('Phone', validators = [DataRequired(message=u'Số điện thoại không chính xác'), Length(min=10, max=12), _check_phone_number])
     email = EmailField('Email', validators = [DataRequired(message=u'Email không chính xác'), Email(message=u'Email không chính xác')])
+    address = EmailField('Address', validators = [DataRequired(message=u'Địa chỉ chính xác')])
 
     # region = SelectField('Region', choices=REGION, validators=[DataRequired(message=u'Xin vui lòng chọn Khu vực sinh sống')], coerce=int)
     # cardtype = SelectField('Cardtype', choices=CARDTYPE, validators=[DataRequired(message=u'Xin vui lòng chọn Loại thẻ đăng ký')], coerce=int)

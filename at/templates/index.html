@@ -45,7 +45,6 @@
                             <li><a href="#page4">Khuyến mãi</a></li>
                         </ul>
                     </div>
-                    <a onclick="ga('send', 'event', 'Phone', 'Click', 'Hotline');" class="calltop w3-btn effect" href="tel:19006682">19006682</a>
                     <a href="#dangky"  class="dangky-top w3-btn effect"><span class="">Đăng kí ngay</span></a>
                 </div>
             </header>
@@ -76,14 +75,14 @@
 
 									 <input type="text" id="phone" name="phone" value={%if form.data.phone%} "{{form.data.phone|safe}}" {%else%} "" {%endif%} placeholder='Điện thoại *:' required pattern="^[0-9]{10,12}$" oninvalid="setCustomValidity('Điện thoại không chính xác!')" oninput="setCustomValidity('')"/>
 
+                                      <input type="text" name="address" {%if form.data.name%} value="{{form.data.address|safe}}" {%endif%} placeholder="Địa chỉ *:" required oninvalid="setCustomValidity('Địa chỉ chính xác!')" oninput="setCustomValidity('')"/>
+
 								</div>
 								<div class="dkbt">
-                                    <!--<button type="submit" value="Register Now" class='btn submit sub-form .fbt' name="submit"></button>-->
-
 									<input class="target fbt bmk submit_s" type="submit" value="">
 								</div>
                                 </form>
-								<div class="tel">Hoặc gọi <a href="tel:19006682">19006682</a> để được hỗ trợ trực tiếp</div>
+								<!--<div class="tel">Vui lòng điền thông tin của bạn để  được tư vấn <a href="javascript:voi(0);">miễn phí</a></div>-->
 
 							</article>
 						</div>
@@ -174,10 +173,9 @@
             <section id="page4">
                     <div class="page_container">
                         <article>
-                            <h2 class="pagett"><span class="uuDai-title">THÁNG 10</span><b> - NGẬP TRÀN ƯU ĐÃI TỪ THẨM MỸ VIỆN BÍCH NGUYỆT</b></h2>
+                            <h2 class="pagett"><b>từ ngày: 26/10/2016 – 26/10/2017</b></h2>
+                            <h2 class="pagett"><span class="uuDai-title">Áp dụng cho khách hàng tại tất cả các cơ sở của Thẩm mỹ viện Bích Nguyệt</span></h2>
 
-                            <h3>* Nhân ngày phụ nữ Việt Nam 20/10 chúng tôi gửi những lời chúc tốt đẹp nhất tới các mẹ, các chị và các em, đồng thời áp dụng chương trình ưu đãi đặc biệt khi tham gia dịch vụ trị nám da tại Bích Nguyệt</h3>
-                            * <b>Áp dụng từ ngày: 01/10/2016 – 19/10/2016 cho khách hàng tại tất cả các cơ sở của Thẩm mỹ viện Bích Nguyệt</b><br>
                             <div class="bottom-form-custom">
                                 <table class="table table-bordered bs-table-default-style">
                                     <tbody>
@@ -238,11 +236,9 @@
                             <div class="w3-col s6 ft_address_col">
                                 <div class="address-item">
                                     <span>Địa chỉ 1: 7C Lê Đại Hành, Hai Bà Trưng, Hà Nội</span>
-                                    <span>Điện thoại: <a href="tel:0436333399">0436.33.33.99</a> . Hotline: <a href="tel:19006682">19006682</a></span>
                                 </div>
                                 <div class="address-item">
                                     <span>Địa chỉ 2: 57 Nguyễn Công Hoan, Ba Đình, Hà Nội</span>
-                                    <span>Điện thoại: <a href="tel:0437713333">043.771.3333</a> . Hotline: <a href="tel:19006682">19006682</a></span>
                                 </div>
                             </div>
                         </div>
@@ -252,7 +248,6 @@
 
             <div class="ftadbox">
                 <div class="ftad effect">
-                    <div class="call"><a class="clearfix" target="_blank" href="tel:19006682"><i class="icon-phone-squared"></i><label>19006682</label></a></div>
                     <div class="reg btnda1km"><a class="clearfix" href="#"><i class="icon-edit"></i><label>Đăng ký</label></a></div>
                 </div>
             </div>
