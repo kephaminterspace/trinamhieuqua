@@ -86,7 +86,7 @@ $(function() {
 });
 //anh truoc sau
 var myIndex = 0;
-//carousel();
+carousel();
 
 function carousel() {
     var i;
@@ -100,7 +100,7 @@ function carousel() {
     setTimeout(carousel, 2000); // Change image every 2 seconds
 }
 var myIndex2 = 0;
-//carousel2();
+carousel2();
 
 function carousel2() {
     var i;
