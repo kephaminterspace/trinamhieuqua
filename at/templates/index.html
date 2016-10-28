@@ -56,7 +56,7 @@
 
                                         <input type="text" name="name" {%if form.data.name%} value="{{form.data.name|safe}}" {%endif%} placeholder="Họ tên *:" required oninvalid="setCustomValidity('Họ tên không chính xác!')" oninput="setCustomValidity('')"/>
 
-                                        <input type="text" name="email" value={%if form.data.email%} "{{form.data.email|safe}}" {%else%} "" {%endif%} class='insert-attr' placeholder='Email *:' required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" oninvalid="setCustomValidity('Email không chính xác!')" oninput="setCustomValidity('')"/>
+                                        <input type="text" name="email" value={%if form.data.email%} "{{form.data.email|safe}}" {%else%} "" {%endif%} class='insert-attr' placeholder='Email *:' required pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" oninvalid="setCustomValidity('Email không chính xác!')" oninput="setCustomValidity('')"/>
 
                                          <input type="text" id="phone" name="phone" value={%if form.data.phone%} "{{form.data.phone|safe}}" {%else%} "" {%endif%} placeholder='Điện thoại *:' required pattern="^[0-9]{10,12}$" oninvalid="setCustomValidity('Điện thoại không chính xác!')" oninput="setCustomValidity('')"/>
 
