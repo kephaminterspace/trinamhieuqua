@@ -237,7 +237,11 @@
         <script src="{{ url_for('static', filename='media/js/jquery.lazyload.min.js')}}"></script>
         <script src="{{ url_for('static', filename='media/js/jquery.countdown.js')}}"></script>
         <script type="text/javascript">
-
+            $(document).ready(function(){
+                $('input[name=email]').keyup(function() {
+                      this.value = this.value.toLowerCase();
+                    });
+              });
         </script>
         <script src="{{ url_for('static', filename='media/js/custum.js')}}"></script>
     </body>
