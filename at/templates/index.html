@@ -253,5 +253,37 @@
               });
         </script>
         <script src="{{ url_for('static', filename='media/js/custum.js')}}"></script>
+        <script src="//cdn.accesstrade.vn/js/tracking.js" ></script>
+        <script type="text/javascript">
+            AT.track();
+            function clearValidity() {
+                document.getElementById('yes').setCustomValidity('');
+            }
+
+            function onInvalidCustom(idstr) {
+                var me = document.getElementById(idstr);
+                me.setCustomValidity('Số điện thoại không chính xác');
+                //me.setCustomValidity('');
+            }
+
+            function getCookie(cname) {
+                    var name = cname + "=";
+                    var ca = document.cookie.split(';');
+                    for(var i = 0; i <ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0)==' ') {
+                            c = c.substring(1);
+                        }
+                        if (c.indexOf(name) == 0) {
+                            return c.substring(name.length,c.length);
+                        }
+                    }
+                    return "";
+            }
+                //alert(getCookie("_aff_network") + "|" + getCookie("_aff_sid"))
+                $("#aff_source").val(getCookie("_aff_network"));
+                $("#aff_sid").val(getCookie("_aff_sid"));
+
+        </script>
     </body>
 </html>
